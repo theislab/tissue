@@ -1,45 +1,67 @@
 # Tissue
 
-[![PyPI](https://img.shields.io/pypi/v/tissue.svg)][pypi_]
-[![Status](https://img.shields.io/pypi/status/tissue.svg)][status]
-[![Python Version](https://img.shields.io/pypi/pyversions/tissue)][python version]
-[![License](https://img.shields.io/pypi/l/tissue)][license]
 
-[![Read the documentation at https://tissue.readthedocs.io/](https://img.shields.io/readthedocs/tissue/latest.svg?label=Read%20the%20Docs)][read the docs]
-[![Codecov](https://codecov.io/gh/mayarali/tissue/branch/main/graph/badge.svg)][codecov]
-
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
-[![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
-
-[pypi_]: https://pypi.org/project/tissue/
-[status]: https://pypi.org/project/tissue/
-[python version]: https://pypi.org/project/tissue
-[read the docs]: https://tissue.readthedocs.io/
-[tests]: https://github.com/mayarali/tissue/actions?workflow=Tests
-[codecov]: https://app.codecov.io/gh/mayarali/tissue
-[pre-commit]: https://github.com/pre-commit/pre-commit
-[black]: https://github.com/psf/black
 
 ## Features
 
-- TODO
+tissue is a model repository in a single python package for the manuscript Fischer, D. S., Ali, M., Richter, S., Etrürk, A. and Theis, F. "Graph neural networks learn emergent tissue properties from spatial molecular profiles."
+<img width="624" alt="Screenshot 2023-07-03 at 10 34 39" src="https://github.com/theislab/tissue_submission/assets/9961724/35595634-2fa9-4fca-b81e-3c8748a33dbb">
+<img width="639" alt="Screenshot 2023-07-03 at 10 35 02" src="https://github.com/theislab/tissue_submission/assets/9961724/03d4c956-c555-46bb-b62e-ccd1fb493da7">
 
-## Requirements
-
-- TODO
 
 ## Installation
 
-You can install _Tissue_ via [pip] from [PyPI]:
+You can install _Tissue_ via :
 
 ```console
-$ pip install tissue
+$ git clone tissue
+$ cd tissue
+$ pip install -e .
+```
+
+## Requirements
+
+You can install the requirements via:
+
+```console
+$ pip install -r requirements.txt
 ```
 
 ## Usage
 
-Please see the [Command-line Reference] for details.
+The repository consists of different components
 
+I. Data loading: datasets can be defined under `data/datasets.py` and pytorch geometric dataloaders are adjusted accordingly in `data/loading.py`
+
+II. Models: graph neural networks and baseline models as described in the paper, the following models can be found under `modules/`:
+#### GNN
+1. Graph convolutional network (GCN)
+2. Graph isomorphism network (GIN)
+3. GCN with self-supervision (GCN-SS)
+4. Graph attention network (GAT)
+
+#### Baseline models
+**Scenario 1: Mean node features models**
+1. Multi-Layer Preceptron (MLP)
+2. Random Forest
+3. Logistic regression
+
+**Scenario 2: Single cell/cell type models**
+1. Multi-instance (MI) on single cell level
+2. Aggregation multi-instance (AGG) on cell type level
+
+**Scenario 3: Spatial models**
+1. Graph neural network without node features
+2. Node degree models (random forest and/or logistic regression)
+3. Dispersion model
+
+The models can be trained using the training scripts provided under `train/`.
+
+III. Summary and evaluation of models: model evaluation and plotting functions are defined in `train/summaries.py`
+
+IV. Model interpretation: interpretation methods on graph and node embedding levels are implemented under `interpretation/`
+
+   
 ## Contributing
 
 Contributions are very welcome.
