@@ -1,0 +1,13 @@
+BATCH_KEY_GRAPH_LABELS = "graph_labels"
+BATCH_KEY_GRAPH_EMBEDDING = "graph_embedding"
+BATCH_KEY_GRAPH_YHAT = "graph_yhat"
+BATCH_KEY_LOCAL_ASSIGNMENTS = "local_assignments"
+BATCH_KEY_LOCAL_LABELS = "local_labels"
+BATCH_KEY_LOCAL_YHAT = "local_yhat"
+BATCH_KEY_NODE_FEATURE_EMBEDDING = "node_feature_embedding"
+BATCH_KEY_NODE_EMBEDDING = "node_embedding"
+BATCH_KEY_NODE_FEATURES = "node_features"
+BATCH_KEY_NODE_LABELS = "node_labels"
+BATCH_KEY_NODE_YHAT = "node_yhat"
+
+FIELD_ADJ = f"spatial_connectivities"
