@@ -61,6 +61,9 @@ III. Summary and evaluation of models: model evaluation and plotting functions a
 
 IV. Model interpretation: interpretation methods on graph and node embedding levels are implemented under `interpretation/`
 
+
+## Tutorial
+We have provided an analysis [tutorial notebook](https://github.com/theislab/tissue/blob/main/tutorial/codex_celltype.ipynb) for one of the dataset used in the study.
    
 ## Contributing
 
