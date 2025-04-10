@@ -28,8 +28,6 @@ You can install the requirements via:
 ```console
 $ pip install -r requirements.txt
 ```
-## Tutorial
-We have provided an analysis [tutorial notebook](https://github.com/theislab/tissue/blob/main/tutorial/codex_celltype.ipynb) for one of the dataset used in the study.
 
 ## Usage
 
@@ -38,26 +36,28 @@ The repository consists of different components
 I. Data loading: datasets can be defined under `data/datasets.py` and pytorch geometric dataloaders are adjusted accordingly in `data/loading.py`
 
 II. Models: graph neural networks and baseline models as described in the paper, the following models can be found under `modules/`:
-#### GNN
+#### Graph Neural Networks (GNNs)
 1. Graph convolutional network (GCN)
 2. Graph isomorphism network (GIN)
-3. GCN with self-supervision (GCN-SS)
 4. Graph attention network (GAT)
 
-#### Baseline models
-**Scenario 1: Mean node features models**
-1. Multi-Layer Preceptron (MLP)
-2. Random Forest
-3. Logistic regression
 
-**Scenario 2: Single cell/cell type models**
-1. Multi-instance (MI) on single cell level
-2. Aggregation multi-instance (AGG) on cell type level
+**1. Spatial Tissue Architecture**
+- Graph-based models (GIN, GCN)
 
-**Scenario 3: Spatial models**
-1. Graph neural network without node features
-2. Node degree models (random forest and/or logistic regression)
-3. Dispersion model
+
+**2. Graph statistics**
+- Density-based models
+
+**3. Single Cell**
+- Multiple-instance models
+
+**4. Bulk**
+- Multilayer Perceptron (MLP)
+- Logistic Regression
+- Random Forest
+
+
 
 The models can be trained using the training scripts provided under `train/`.
 
