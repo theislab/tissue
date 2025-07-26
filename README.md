@@ -6,7 +6,7 @@
 
 tissue is a model repository in a single python package for the manuscript Ali, M., Richter, S., Etrürk, A. , Fischer, D. S. and Theis, F. "Graph neural networks learn emergent tissue properties from spatial molecular profiles."
 
-Code: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16440987.svg)](https://doi.org/10.5281/zenodo.16440987)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16440987.svg)](https://doi.org/10.5281/zenodo.16440987)
 
 ![Screenshot 2023-07-31 at 18 49 03](https://github.com/theislab/tissue/assets/9961724/d0e78c7d-ede8-4a05-8254-5ca0060fbd17)
  
